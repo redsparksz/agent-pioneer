@@ -46,3 +46,7 @@ Agent ID is the access control of the whole product — not a label, the gate:
 > I built Agent Pioneer for the Binance Agent ID Hackathon: a free soulbound badge for Agent ID holders. Mint it (gas only), check in daily, grow your streak — your .ai name, proven on-chain.
 >
 > [link] #BinanceWalletHackathon #AgenticWallet
+
+## Announcement draft 2 — MINT IS LIVE (posted after deploy, 18 Nov 2026, 180 chars)
+
+> Agent Pioneer is LIVE — free soulbound badge for Agent ID holders. Mint (gas only), check in daily, grow your streak. https://redsparksz.github.io/agent-pioneer/ #BinanceWalletHackathon #AgenticWallet
