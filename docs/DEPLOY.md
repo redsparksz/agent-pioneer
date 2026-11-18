@@ -102,7 +102,7 @@ Then verify on-chain (read-only):
 
 ## 7. After deploy
 
-- Update `frontend/app.js` CONFIG: `contractAddress` (confirmed), `deployBlock` (deploy block number).
+- Update `docs/app.js` CONFIG: `contractAddress` (confirmed), `deployBlock` (deploy block number).
 - Update `docs/SUBMISSION.md` with the real address + tx hash.
-- Push to GitHub; GitHub Pages serves `frontend/`.
+- Push to GitHub; GitHub Pages serves `docs/`.
 - Announce: X post + Binance Square post (user posts; draft in `docs/SUBMISSION.md`).

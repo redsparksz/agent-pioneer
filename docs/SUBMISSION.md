@@ -8,7 +8,7 @@
 - **Name:** Agent Pioneer
 - **Tagline:** Soulbound attendance badge for Binance Agent ID holders.
 - **Repo:** https://github.com/redsparksz/agent-pioneer
-- **Website:** https://redsparksz.github.io/agent-pioneer/ (GitHub Pages, `frontend/`)
+- **Website:** https://redsparksz.github.io/agent-pioneer/ (GitHub Pages, `docs/`)
 - **Contract (BSC 56):** `TBD — predicted 0x32cf34bbb7e01f75db33d55da850bf26ba056f50` (confirm after deploy; tx hash TBD)
 - **Team:** solo — Scorpio (agent) + bos (arjuna.ai / bitkep.ai, Agent ID holders)
 - **Reward receiving address (if we win):** arjuna `0x23c1D6815BAFfB1C78eFB65d9E460e075a7E6Bf3` (to be confirmed by user before submit)
