@@ -3,8 +3,8 @@
 // No QR login, no session storage, no credentials. Every tx is confirmed by the user in their wallet.
 const CONFIG = {
   chainId: 56, // BSC
-  contractAddress: '0x32cf34bbb7e01f75db33d55da850bf26ba056f50', // predicted CreateX address; confirm after deploy
-  deployBlock: 0, // set after deploy (leaderboard scan start)
+  contractAddress: '0x32cf34bbb7e01f75db33d55da850bf26ba056f50', // deployed 18 Nov 2026, tx 0x9eb845b823b291c839c8af62ecc39e846e1c90adbbe3a392ce2c26440dbe7e59
+  deployBlock: 134313835, // deploy block (leaderboard scan start)
   agentIdRegistry: '0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F',
   bscscan: 'https://bscscan.com/address/',
 };
