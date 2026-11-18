@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Pioneer — Soulbound attendance for Binance Agent ID holders</title>
+<style>
+  :root { --bg:#0b0b12; --card:#14141f; --gold:#f0b90b; --text:#f5f5f7; --muted:#8a8a9a; --green:#2ebd85; --red:#f6465d; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; min-height:100vh; }
+  .wrap { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  header { text-align:center; margin-bottom:28px; }
+  h1 { font-size:30px; letter-spacing:.5px; }
+  h1 span { color:var(--gold); }
+  .sub { color:var(--muted); margin-top:8px; line-height:1.5; }
+  .card { background:var(--card); border:1px solid #26263a; border-radius:16px; padding:20px; margin-top:16px; }
+  .row { display:flex; justify-content:space-between; gap:12px; padding:8px 0; border-bottom:1px solid #1e1e2e; }
+  .row:last-child { border-bottom:none; }
+  .label { color:var(--muted); }
+  .value { font-weight:600; text-align:right; }
+  .ok { color:var(--green); } .bad { color:var(--red); }
+  button { display:block; width:100%; padding:14px; margin-top:12px; border:none; border-radius:12px; font-size:16px; font-weight:700; cursor:pointer; background:var(--gold); color:#111; }
+  button:disabled { background:#2a2a3a; color:#666; cursor:not-allowed; }
+  button.secondary { background:#23233a; color:var(--text); }
+  #status { margin-top:12px; font-size:14px; color:var(--muted); line-height:1.5; word-break:break-word; }
+  #status a { color:var(--gold); }
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+  th, td { padding:8px 4px; text-align:left; border-bottom:1px solid #1e1e2e; }
+  th { color:var(--muted); font-weight:600; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .mono { font-family:ui-monospace,Menlo,monospace; font-size:13px; word-break:break-all; }
+  footer { margin-top:28px; text-align:center; color:var(--muted); font-size:13px; line-height:1.7; }
+  footer a { color:var(--gold); }
+  .badge-img { display:block; margin:0 auto 12px; width:160px; height:160px; border-radius:16px; border:2px solid var(--gold); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AGENT <span>PIONEER</span></h1>
+    <p class="sub">Soulbound attendance badge for Binance Agent ID holders.<br>
+    Free to mint (gas only). Check in daily, grow your streak — your Agent ID, proven on-chain.</p>
+  </header>
+
+  <div class="card">
+    <div class="row"><span class="label">Network</span><span class="value" id="net">—</span></div>
+    <div class="row"><span class="label">Wallet</span><span class="value mono" id="wallet">not connected</span></div>
+    <div class="row"><span class="label">Agent ID (.ai)</span><span class="value" id="agentid">—</span></div>
+    <div class="row"><span class="label">Badge</span><span class="value" id="badge">—</span></div>
+    <div class="row"><span class="label">Streak</span><span class="value" id="streak">—</span></div>
+    <div class="row"><span class="label">Total check-ins (you)</span><span class="value" id="mycheckins">—</span></div>
+    <div class="row"><span class="label">Total badges minted</span><span class="value" id="totalminted">—</span></div>
+    <div class="row"><span class="label">Total check-ins (all)</span><span class="value" id="totalcheckins">—</span></div>
+    <button id="connectBtn">Connect wallet</button>
+    <button id="mintBtn" disabled>Mint free badge</button>
+    <button id="checkinBtn" disabled>Check in today</button>
+    <div id="status"></div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:18px;">Leaderboard — longest streaks</h2>
+    <div id="board"><p style="color:var(--muted);margin-top:8px;">Loading…</p></div>
+  </div>
+
+  <div class="card">
+    <h2 style="font-size:18px;">How it works</h2>
+    <p style="color:var(--muted);line-height:1.7;margin-top:8px;">
+      1. Hold a Binance Agent ID (<span class="mono">name.ai</span>) in your wallet.<br>
+      2. Mint your soulbound Pioneer Badge — free, you only pay gas (~$0.005).<br>
+      3. Check in once per UTC day. Consecutive days grow your streak; a missed day resets it to 1.<br>
+      4. The badge can never be transferred or approved to anyone. No owner, no admin, no upgrade — the contract is immutable.
+    </p>
+    <p style="color:var(--muted);line-height:1.7;margin-top:8px;">
+      Contract: <span class="mono" id="contractAddr">—</span><br>
+      Agent ID registry: <span class="mono">0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</span><br>
+      <a href="https://github.com/redsparksz/agent-pioneer" target="_blank" rel="noopener">Source code (GitHub)</a>
+    </p>
+  </div>
+
+  <footer>
+    Built for the Binance Agent ID Hackathon (18 Nov – 9 Dec 2026).<br>
+    No payments, no promised returns, no credentials collected. You confirm every transaction in your own wallet.
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.17.0/dist/ethers.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
